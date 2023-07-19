@@ -1,6 +1,6 @@
 :root {
   --base-clr: hsl(229, 19%, 23%);
-  --base-darkder: hsl(231, 19%, 20%);
+  --base-darker: hsl(231, 19%, 20%);
   --base-darkest: hsl(229, 20%, 17%);
   --text-clr: hsl(227, 70%, 87%);
   --text-darker: hsl(227, 44%, 80%);
@@ -14,33 +14,33 @@
 
 @font-face {
   font-family: "Poppins";
-  src: url("./assets/fonts/poppins-regular-webfont.woff2") format('woff2');
+  src: url("./assets/fonts/poppins-regular-webfont.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Poppins";
-  src: url("./assets/fonts/poppins-bold-webfont.woff2") format('woff2');
+  src: url("./assets/fonts/poppins-bold-webfont.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Poppins";
-  src: url("./assets/fonts/poppins-light-webfont.woff2") format('woff2');
+  src: url("./assets/fonts/poppins-light-webfont.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "Poppins";
-  src: url("./assets/fonts/poppins-italic-webfont.woff2") format('woff2');
+  src: url("./assets/fonts/poppins-italic-webfont.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "Poppins";
-  src: url("./assets/fonts/poppins-lightitalic-webfont.woff2") format('woff2');
+  src: url("./assets/fonts/poppins-lightitalic-webfont.woff2") format("woff2");
   font-weight: 300;
-  font-style: normal;
+  font-style: italic;
 }
 
 /* Box sizing rules */
@@ -62,6 +62,7 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  font: inherit;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -121,5 +122,58 @@ select {
 /* css starts here */
 body {
   font-family: Poppins;
+  font-size: 1rem;
   background-color: var(--base-clr);
+  color: var(--text-clr);
+}
+.header {
+  font-size: 2.5rem;
+  padding: 1em;
+  margin: 1em;
+  text-align: center;
+}
+.header h2 {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 300;
+}
+.scorecard {
+  background-color: var(--base-darker);
+  border-radius: 1em;
+  display: flex;
+  font-size: 1.75rem;
+  padding: 1em;
+  margin: 1em auto;
+  align-items: center;
+  max-width: 45rem;
+  justify-content: space-between;
+  text-align: center;
+}
+.scorecard div img {
+  font-size: 6.4rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+.buttons {
+  max-width: 45rem;
+  padding: 1em;
+  margin: 1em auto;
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  background-color: var(--base-darkest);
+  border-radius: 1rem;
+}
+.buttons :hover {
+  scale: 1.1;
+}
+.buttons img {
+  scale: 1;
+}
+footer {
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 1em;
+  padding: 1em;
 }
