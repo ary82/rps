@@ -12,6 +12,37 @@
   --text-error: hsl(359, 68%, 71%);
 }
 
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/poppins-regular-webfont.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/poppins-bold-webfont.woff2") format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/poppins-light-webfont.woff2") format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/poppins-italic-webfont.woff2") format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/poppins-lightitalic-webfont.woff2") format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -89,5 +120,6 @@ select {
 
 /* css starts here */
 body {
+  font-family: Poppins;
   background-color: var(--base-clr);
 }
