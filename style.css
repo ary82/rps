@@ -183,3 +183,24 @@ footer {
   margin: 1em;
   padding: 1em;
 }
+#win {
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 1em;
+  padding: 1em;
+  color: var(--text-success);
+}
+#loss {
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 1em;
+  padding: 1em;
+  color: var(--text-error);
+}
+#draw {
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 1em;
+  padding: 1em;
+  color: var(--text-links);
+}
