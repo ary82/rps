@@ -28,17 +28,27 @@ function decide(playerselection, compselection) {
   if (playerselection == "Rock" && compselection == "Scissors") {
     footer.textContent = "Rock beats Scissors";
     pscore.textContent = `You : ${++playerscore}`;
+    footer.removeAttribute("id");
+    footer.setAttribute("id", "win");
   } else if (playerselection == "Paper" && compselection == "Rock") {
     footer.textContent = "Paper beats Rock";
     pscore.textContent = `You : ${++playerscore}`;
+    footer.removeAttribute("id");
+    footer.setAttribute("id", "win");
   } else if (playerselection == "Scissors" && compselection == "Paper") {
     footer.textContent = "Scissors beats Paper";
     pscore.textContent = `You : ${++playerscore}`;
+    footer.removeAttribute("id");
+    footer.setAttribute("id", "win");
   } else if (playerselection == compselection) {
     footer.textContent = "Draw";
+    footer.removeAttribute("id");
+    footer.setAttribute("id", "draw");
   } else {
     footer.textContent = `${compselection} beats ${playerselection}`;
     cscore.textContent = `Computer : ${++compscore}`;
+    footer.removeAttribute("id");
+    footer.setAttribute("id", "loss");
   }
   if ((playerscore >= 5) || (compscore >= 5)) {
     console.log("Game over");
