@@ -103,22 +103,6 @@ select {
   font: inherit;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
 /* css starts here */
 body {
   font-family: Poppins;
@@ -150,7 +134,6 @@ body {
   text-align: center;
 }
 .scorecard div img {
-  font-size: 6.4rem;
   margin: 1rem;
   padding: 1rem;
 }
@@ -239,4 +222,13 @@ footer {
   margin: 0.8em;
   margin-top: 1.2em;
   border-radius: 0.5em;
+}
+
+@media screen and (max-width: 480px) {
+  .scorecard h3 {
+    font-size: 6.4rem;
+    margin: 1rem;
+    padding: 1rem;
+    width: 130px;
+  }
 }
