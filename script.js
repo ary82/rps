@@ -8,6 +8,10 @@ const compimg = document.getElementById("compimg");
 const footer = document.querySelector("footer");
 const pscore = document.querySelector(".player h2");
 const cscore = document.querySelector(".computer h2");
+const overlay = document.getElementById("overlay");
+const popup = document.getElementById("popup");
+const popuppara = document.querySelector("#popup p");
+const playagain = document.getElementById("playagain");
 let playerselection = 0;
 let compselection = 0;
 let playerscore = 0;
@@ -19,25 +23,29 @@ function getcompselection() {
 }
 
 function Gameover(playerscore, compscore) {
+  overlay.setAttribute("style", "visibility: visible;");
+  popup.setAttribute("style", "visibility: visible;");
   if (playerscore > compscore) {
+    popuppara.textContent = "You won!";
   } else {
+    popuppara.textContent = "You Lose...";
   }
 }
 
 function decide(playerselection, compselection) {
   if (playerselection == "Rock" && compselection == "Scissors") {
     footer.textContent = "Rock beats Scissors";
-    pscore.textContent = `You : ${++playerscore}`;
+    pscore.textContent = `You: ${++playerscore}`;
     footer.removeAttribute("id");
     footer.setAttribute("id", "win");
   } else if (playerselection == "Paper" && compselection == "Rock") {
     footer.textContent = "Paper beats Rock";
-    pscore.textContent = `You : ${++playerscore}`;
+    pscore.textContent = `You: ${++playerscore}`;
     footer.removeAttribute("id");
     footer.setAttribute("id", "win");
   } else if (playerselection == "Scissors" && compselection == "Paper") {
     footer.textContent = "Scissors beats Paper";
-    pscore.textContent = `You : ${++playerscore}`;
+    pscore.textContent = `You: ${++playerscore}`;
     footer.removeAttribute("id");
     footer.setAttribute("id", "win");
   } else if (playerselection == compselection) {
@@ -46,7 +54,7 @@ function decide(playerselection, compselection) {
     footer.setAttribute("id", "draw");
   } else {
     footer.textContent = `${compselection} beats ${playerselection}`;
-    cscore.textContent = `Computer : ${++compscore}`;
+    cscore.textContent = `Computer: ${++compscore}`;
     footer.removeAttribute("id");
     footer.setAttribute("id", "loss");
   }
@@ -90,4 +98,13 @@ scissorbutton.addEventListener("click", function (e) {
   compimg.style = "default";
   compimg.src = `assets/sgvs/${compselection}.svg`;
   decide(playerselection, compselection);
+});
+playagain.addEventListener("click", () => {
+  playerscore = 0;
+  compscore = 0;
+  pscore.textContent = "You: 0";
+  cscore.textContent = "Computer: 0";
+  footer.textContent = "Press a button to start";
+  overlay.setAttribute("style", "visibility: hidden;");
+  popup.setAttribute("style", "visibility: hidden;");
 });
