@@ -179,6 +179,7 @@ button {
 }
 footer {
   font-size: 1.25rem;
+  color: var(--text-links);
   text-align: center;
   margin: 1em;
   padding: 1em;

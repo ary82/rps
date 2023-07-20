@@ -104,6 +104,7 @@ playagain.addEventListener("click", () => {
   compscore = 0;
   pscore.textContent = "You: 0";
   cscore.textContent = "Computer: 0";
+  footer.removeAttribute("id");
   footer.textContent = "Press a button to start";
   overlay.setAttribute("style", "visibility: hidden;");
   popup.setAttribute("style", "visibility: hidden;");
