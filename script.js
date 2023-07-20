@@ -59,9 +59,6 @@ function decide(playerselection, compselection) {
     footer.setAttribute("id", "loss");
   }
   if ((playerscore >= 5) || (compscore >= 5)) {
-    console.log("Game over");
-    console.log(playerscore);
-    console.log(compscore);
     Gameover(playerscore, compscore);
   }
 }
